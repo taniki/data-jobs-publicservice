@@ -1,0 +1,14 @@
+---
+---
+-
+    // console.log(collections.offers)
+    let offers = collections.offers
+
+table
+    tbody
+        each offer in collections.offers
+            tr
+                td= offer['publication_date']
+                td= offer['title']
+                td
+                    a(href=offer['url']) place de l'emploi public
