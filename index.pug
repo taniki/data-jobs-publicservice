@@ -7,19 +7,19 @@ layout: base.pug
 
 table.table-auto
     thead
-        tr
+        tr(class="text-gray-500 font-semibold")
             td(class="p-3") date de publication
             td(class="p-3") intitulé de fiche de poste 
             td(class="p-3") lien
     tbody
         each offer in collections.offers
             tr
-                td(class="p-3")= offer['publication_date']
+                td(class="p-3 align-text-top text-gray-500")= offer['publication_date']
                 td(class="p-3")
                     div(class="font-semibold")= offer['title']
                     div(class="text-gray-500")= (offer['organization'] || offer['department']).substr(0, 100)
                 td(class="p-3")
-                    a(href=offer['url']) place de l'emploi public
+                    a(href=offer['url']) Voir sur place de l'emploi public
                     
 
 hr
