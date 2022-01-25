@@ -1,8 +1,17 @@
 {
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "autoprefixer": "^10.4.2",
+    "concurrently": "^7.0.0",
     "csv-parse": "^5.0.3",
     "moment": "^2.29.1",
-    "node-fetch": "^2.6.6"
+    "node-fetch": "^2.6.6",
+    "postcss-cli": "^9.1.0",
+    "tailwindcss": "^3.0.15"
+  },
+  "scripts": {
+    "tailwind:process": "npx postcss scss/global.css --o _includes/css/global.css --watch",
+    "start": "concurrently \"npm run tailwind:process\" \"npm run serve\"",
+    "serve": "npx eleventy --serve"
   }
 }

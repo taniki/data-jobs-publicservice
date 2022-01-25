@@ -10,6 +10,10 @@ module.exports = (eleventyConfig) => {
     // debug: true,
   });
 
+  eleventyConfig.addPassthroughCopy({
+    "_includes/css/global.css": "./global.css",
+  });
+
   eleventyConfig.addCollection("offers", async (collection) => {
     // let data = fs.readFileSync("_data/latest.csv", "utf8");
 
